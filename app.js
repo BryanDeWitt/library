@@ -4,15 +4,16 @@ const form = document.querySelector("#form");
 const blured = document.querySelector(".blur");
 const submit = document.querySelector("input[type=submit]")
 
-function Book(title, author, pages, readed) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.readed = readed === "si" ? true : false;
-}
-
-Book.prototype.readedOrNot = function (){
-  this.readed = !this.readed;
+class Book{
+  constructor(title, author, pages, readed){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.readed = readed === "si" ? true : false;
+  }
+  readedOrNot(){
+    this.readed = !this.readed
+  }
 }
 
 function readedOrNot(index){
@@ -64,13 +65,16 @@ function removeBook(index){
 
 
 function addBook(){
-  let title = document.querySelector('#title').value;
-  let author = document.querySelector('#author').value;
-  let pages = document.querySelector('#pages').value;
-  let read = document.querySelector('#readed').value;
-  let newBook = new Book(title, author, pages, read)
+  let title = document.querySelector('#title');
+  let author = document.querySelector('#author');
+  let pages = document.querySelector('#pages');
+  let read = document.querySelector('#readed');
+  let newBook = new Book(title.value, author.value, pages.value, read.value)
   books.push(newBook)
   render()
+  title.value = ''
+  author.value = ''
+  pages.value = ''
 }
 
 submit.addEventListener('click', e =>{
