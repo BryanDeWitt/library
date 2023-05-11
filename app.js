@@ -25,6 +25,10 @@ addBtn.addEventListener("click", () => {
   form.classList.toggle("show");
   form.classList.toggle("hidden");
   blured.classList.toggle("blured");
+  let deleteBtn = document.querySelectorAll(".delete-button");
+  deleteBtn.forEach((btn) => {
+    btn.disabled = true;
+  });
 });
 
 let book1 = new Book("Peepo el Clown", "Bryan", 55, "si");
