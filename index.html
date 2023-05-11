@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./app.js" defer></script>
     <script src="./buttons.js" defer></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="blur">
-        <header>
-            <h1>Your library</h1>
-            <button class="add" name="add" value="add" id="btn">Add Book</button>
-        </header>
-        
-        <ul></ul>
+      <header>
+        <h1>Your library</h1>
+        <button class="add" name="add" value="add" id="btn">Add Book</button>
+      </header>
+
+      <ul></ul>
     </div>
     <form action="" method="post" class="hidden" id="form">
-        <label for="title">Title</label>
-        <input id="title" type="text" placeholder="Book Title">  
-        <label for="author">Author</label>
-        <input id="author" type="text" placeholder="Author">
-        <label for="pages">Pages</label>
-        <input id="pages" type="number" placeholder="Number of Pages">
-        <label for="readed">Have you read this book?</label>
-        <select id="readed" name="" id="">
-            <option value="si">Si</option>
-            <option value="no">No</option>
-        </select>
-        <input type="submit">
+      <label for="title">Title</label>
+      <input
+        id="title"
+        type="text"
+        placeholder="Book Title"
+        required
+        minlength="4"
+      />
+      <label for="author">Author</label>
+      <input
+        id="author"
+        type="text"
+        placeholder="Author"
+        required
+        minlength="4"
+      />
+      <label for="pages">Pages</label>
+      <input id="pages" type="number" placeholder="Number of Pages" required />
+      <label for="readed">Have you read this book?</label>
+      <select id="readed" name="" id="">
+        <option value="si">Si</option>
+        <option value="no">No</option>
+      </select>
+      <input type="submit" />
     </form>
-</body>
+  </body>
 </html>
-
